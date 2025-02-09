@@ -28,9 +28,9 @@ def generate_trajectory(start_pose, end_pose, args, fa, dt=0.01):
     ts = np.arange(0, args.time, dt)
 
     joints_traj = [utils.min_jerk(q1, q2, t, args.time) for t in ts] #could maybe use another planner
-    print(len(joints_traj))
-    print("ts", ts)
-    print("joint_traj", joints_traj)
+    #print(len(joints_traj))
+    #print("ts", ts)
+    #print("joint_traj", joints_traj)
     skill_dict = create_formated_skill_dict(joints_traj, ts)
     with open(args.file, 'wb') as pkl_f:
         pkl.dump(skill_dict, pkl_f)
@@ -39,19 +39,21 @@ def generate_trajectory(start_pose, end_pose, args, fa, dt=0.01):
 if __name__ == "__main__":
     fa = FrankaArm()
     parser = argparse.ArgumentParser()
-    parser.add_argument('--time', '-t', type=float, default=10)
-    parser.add_argument('--file', '-f', default='franka_traj.pkl')
+    parser.add_argument('--time', '-t', type=float, default=5)
+    parser.add_argument('--file', '-f', default='home_assembly_traj.pkl')
     args = parser.parse_args()
 
     fa.reset_joints()
     start_pose = fa.get_pose()
 
     pose1 = start_pose.copy()
-    pose1.translation -= [0.0, 0.0, 0.1]
+    #pose1.translation -= [0.0, 0.0, 0.1]
     pose2 = start_pose.copy()
-    pose2.translation += [0.0, 0.0, 0.1]
+    #z_rot = np.array([[0, 1, 0], [-1, 0, 0], [0, 0, 1]]) # z axis points down, -90 turn
+    pose2.translation = [0.475, 0.05, 0.45]
+    #pose2.rotation = pose2.rotation@z_rot
     
     generate_trajectory(pose1, pose2, args, fa)
-    fa.reset_joints()
+    #fa.reset_joints()
 
 

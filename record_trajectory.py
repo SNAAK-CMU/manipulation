@@ -21,13 +21,14 @@ def create_formated_skill_dict(joints, time_since_skill_started):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--time', '-t', type=float, default=10)
+    parser.add_argument('--time', '-t', type=float, default=20)
     parser.add_argument('--file', '-f', default='franka_traj.pkl')
     args = parser.parse_args()
 
     print('Starting robot')
     fa = FrankaArm()
     fa.reset_joints()
+    
     time.sleep(1)
 
     print('Applying 0 force torque control for {}s'.format(args.time))
@@ -54,8 +55,8 @@ if __name__ == '__main__':
             break
     print("End of Recording, Saving to File...")
 
-
     skill_dict = create_formated_skill_dict(joints, time_since_skill_started)
     with open(args.file, 'wb') as pkl_f:
         pkl.dump(skill_dict, pkl_f)
         print("Did save skill dict: {}".format(args.file))
+       

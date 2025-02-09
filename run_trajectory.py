@@ -21,7 +21,7 @@ def execute_trajectory(fa, args):
 
     T = float(skill_state_dict['time_since_skill_started'][-1])
     #dt = 0.01
-    dt = 0.005 # lower dt corresponds to faster movement
+    dt = 0.01 # lower dt corresponds to faster movement
     ts = np.arange(0, T, dt)
 
     #pose_traj = skill_state_dict['O_T_EE']
@@ -57,16 +57,17 @@ def execute_trajectory(fa, args):
             term_proto_msg, SensorDataMessageType.SHOULD_TERMINATE)
         )
     fa.publish_sensor_data(ros_msg)
-
+    #fa.stop_skill()
     fa.log_info('Done')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--trajectory_pickle', '-t', type=str, #required=True,
-                        help='Path to trajectory (in pickle format) to replay.', default='franka_traj.pkl')
+                        help='Path to trajectory (in pickle format) to replay.', default='home_bin_1_traj.pkl')
     args = parser.parse_args()
 
     print('Starting robot')
     fa = FrankaArm()
     fa.reset_joints()
     execute_trajectory(fa, args)
+    #fa.reset_joints()
