@@ -36,7 +36,9 @@ if __name__ == '__main__':
     joints = []
 
     time_since_skill_started = []
+    print("Starting Guide Mode...")
     fa.run_guide_mode(args.time, block=False)
+    print("Guide mode on!")
     start_time = time.time()
     last_time = None
 
