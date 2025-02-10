@@ -14,11 +14,14 @@ find_package(ament_cmake_python REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclpy REQUIRED)
 
+find_package(geometry_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(tf2 REQUIRED) 
+find_package(tf2_ros REQUIRED) 
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "action/FollowTrajectory.action"
-  "msg/RigidTransform.msg"
+  DEPENDENCIES geometry_msgs
 )
 
 install(PROGRAMS

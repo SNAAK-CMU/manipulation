@@ -1,0 +1,81 @@
+[0.010s] Invoking command in '/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation -DCMAKE_INSTALL_PREFIX=/home/oberton/manipulation/manipulation_ws/install/snaak_manipulation
+[0.117s] -- The C compiler identification is GNU 11.4.0
+[0.195s] -- The CXX compiler identification is GNU 11.4.0
+[0.203s] -- Detecting C compiler ABI info
+[0.272s] -- Detecting C compiler ABI info - done
+[0.276s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.277s] -- Detecting C compile features
+[0.277s] -- Detecting C compile features - done
+[0.279s] -- Detecting CXX compiler ABI info
+[0.346s] -- Detecting CXX compiler ABI info - done
+[0.350s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.350s] -- Detecting CXX compile features
+[0.350s] -- Detecting CXX compile features - done
+[0.353s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.456s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.523s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[0.560s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.563s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.570s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.580s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.591s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.623s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.625s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.711s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.733s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.763s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.770s] -- Looking for pthread.h
+[0.839s] -- Looking for pthread.h - found
+[0.839s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.895s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.895s] -- Found Threads: TRUE  
+[0.933s] -- Found rclpy: 3.3.15 (/opt/ros/humble/share/rclpy/cmake)
+[0.934s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.046s] [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
+[1.046s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[1.046s]   snaak_manipulation --arguments-file
+[1.046s]   /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter__arguments__snaak_manipulation.json
+[1.046s]   --output-dir
+[1.046s]   /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation
+[1.046s]   --output-file
+[1.046s]   /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation.idls)
+[1.046s]   returned error code 1:
+[1.046s] 
+[1.046s]   Error processing 'snaak_manipulation/msg/RigidTransform end_pose' of
+[1.047s]   'snaak_manipulation/FollowTrajectory_Result':
+[1.047s]   'snaak_manipulation/msg/RigidTransform'
+[1.047s] 
+[1.047s]   Traceback (most recent call last):
+[1.047s] 
+[1.047s]     File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[1.047s]       return _run_code(code, main_globals, None,
+[1.047s]     File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+[1.047s]       exec(code, run_globals)
+[1.047s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.047s]       sys.exit(main())
+[1.047s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main
+[1.047s]       abs_idl_file = convert_to_idl(
+[1.047s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 29, in convert_to_idl
+[1.047s]       return convert_action_to_idl(
+[1.047s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/action/__init__.py", line 28, in convert_action_to_idl
+[1.047s]       action = parse_action_string(package_name, input_file.stem, content)
+[1.047s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 904, in parse_action_string
+[1.047s]       result_message = parse_message_string(
+[1.047s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 520, in parse_message_string
+[1.047s]       Type(type_string, context_package_name=pkg_name),
+[1.047s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 277, in __init__
+[1.047s]       super(Type, self).__init__(
+[1.047s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 190, in __init__
+[1.047s]       raise InvalidResourceName(type_string)
+[1.047s] 
+[1.047s]   rosidl_adapter.parser.InvalidResourceName:
+[1.047s]   snaak_manipulation/msg/RigidTransform
+[1.047s] 
+[1.047s] Call Stack (most recent call first):
+[1.047s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[1.047s]   CMakeLists.txt:19 (rosidl_generate_interfaces)
+[1.047s] 
+[1.047s] [0m
+[1.047s] -- Configuring incomplete, errors occurred!
+[1.047s] See also "/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles/CMakeOutput.log".
+[1.053s] Invoked command in '/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation -DCMAKE_INSTALL_PREFIX=/home/oberton/manipulation/manipulation_ws/install/snaak_manipulation

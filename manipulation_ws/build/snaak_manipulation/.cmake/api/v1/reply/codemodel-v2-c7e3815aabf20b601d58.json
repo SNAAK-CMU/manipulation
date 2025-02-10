@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-02425092c09ff53308c2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "snaak_manipulation__py",
+					"jsonFile" : "directory-snaak_manipulation__py-c663fbdef823174beca6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/snaak_manipulation__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "snaak_manipulation",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_snaak_manipulation_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_snaak_manipulation_egg-3465d50d82ceda4aa27e.json",
+					"name" : "ament_cmake_python_build_snaak_manipulation_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_snaak_manipulation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_snaak_manipulation-9f191134467295ad05da.json",
+					"name" : "ament_cmake_python_copy_snaak_manipulation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "snaak_manipulation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snaak_manipulation-a2a63579312381e7905a.json",
+					"name" : "snaak_manipulation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "snaak_manipulation__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snaak_manipulation__cpp-b8c147896715c6418a3a.json",
+					"name" : "snaak_manipulation__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "snaak_manipulation__py::@3895e049598231b7fdbe",
+					"jsonFile" : "target-snaak_manipulation__py-616764c6b481e0161cc7.json",
+					"name" : "snaak_manipulation__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "snaak_manipulation__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snaak_manipulation__rosidl_generator_c-ba842e18ee827d888f8f.json",
+					"name" : "snaak_manipulation__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "snaak_manipulation__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snaak_manipulation__rosidl_generator_py-8bd332a79f5b33b9d05a.json",
+					"name" : "snaak_manipulation__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "snaak_manipulation__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snaak_manipulation__rosidl_typesupport_c-66436324dd100db1cf8e.json",
+					"name" : "snaak_manipulation__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "snaak_manipulation__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snaak_manipulation__rosidl_typesupport_c__pyext-4af93cf95096d2640a7b.json",
+					"name" : "snaak_manipulation__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "snaak_manipulation__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snaak_manipulation__rosidl_typesupport_cpp-d12cca0b8cadbe2179a6.json",
+					"name" : "snaak_manipulation__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "snaak_manipulation__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snaak_manipulation__rosidl_typesupport_fastrtps_c-5f6c1f23b1f85589b5f8.json",
+					"name" : "snaak_manipulation__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "snaak_manipulation__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snaak_manipulation__rosidl_typesupport_fastrtps_c__pyext-00799f45fe81b4212db7.json",
+					"name" : "snaak_manipulation__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "snaak_manipulation__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snaak_manipulation__rosidl_typesupport_fastrtps_cpp-0de5678eff9ea49f6453.json",
+					"name" : "snaak_manipulation__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "snaak_manipulation__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snaak_manipulation__rosidl_typesupport_introspection_c-025a63f5ba928d7db8be.json",
+					"name" : "snaak_manipulation__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "snaak_manipulation__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snaak_manipulation__rosidl_typesupport_introspection_c__pyext-b0b425dfa04468eab9dd.json",
+					"name" : "snaak_manipulation__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "snaak_manipulation__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snaak_manipulation__rosidl_typesupport_introspection_cpp-7ae565730ac306f0a211.json",
+					"name" : "snaak_manipulation__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "snaak_manipulation_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snaak_manipulation_uninstall-35bfa7ae11836ab1ad84.json",
+					"name" : "snaak_manipulation_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-f0180890e177aa3ed31f.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation",
+		"source" : "/home/oberton/manipulation/manipulation_ws/src/snaak_manipulation"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
