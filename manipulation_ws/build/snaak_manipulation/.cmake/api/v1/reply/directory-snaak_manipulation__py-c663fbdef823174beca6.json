@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "snaak_manipulation__py",
+		"source" : "/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/snaak_manipulation__py"
+	}
+}
