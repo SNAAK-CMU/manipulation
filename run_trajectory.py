@@ -48,26 +48,61 @@ def execute_trajectory(fa, args):
         fa.log_info('Publishing: ID {}'.format(traj_gen_proto_msg.id))
         fa.publish_sensor_data(ros_msg)
         time.sleep(dt)
+    
 
-    # Stop the skill
-    # Alternatively can call fa.stop_skill()
-    term_proto_msg = ShouldTerminateSensorMessage(timestamp=fa.get_time() - init_time, should_terminate=True)
-    ros_msg = make_sensor_group_msg(
-        termination_handler_sensor_msg=sensor_proto2ros_msg(
-            term_proto_msg, SensorDataMessageType.SHOULD_TERMINATE)
-        )
-    fa.publish_sensor_data(ros_msg)
-    #fa.stop_skill()
-    fa.log_info('Done')
+    try:
+        # Stop the skill
+        print("Trajectory executed! Stopping Skill...")
+        fa._in_skill = False
+        
+        # Alternatively can call fa.stop_skill()
+        # term_proto_msg = ShouldTerminateSensorMessage(timestamp=fa.get_time() - init_time, should_terminate=True)
+        # ros_msg = make_sensor_group_msg(
+        #     termination_handler_sensor_msg=sensor_proto2ros_msg(
+        #         term_proto_msg, SensorDataMessageType.SHOULD_TERMINATE)
+        #     )
+        # fa.publish_sensor_data(ros_msg)
+
+        fa.stop_skill()
+        if fa.is_skill_done():
+            fa.log_info('Done! Arm is free')
+    except Exception as e:
+        raise e
+    finally:
+        return
+
+    
+    
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--trajectory_pickle', '-t', type=str, #required=True,
-                        help='Path to trajectory (in pickle format) to replay.', default='home_bin_1_traj.pkl')
+                        help='Path to trajectory (in pickle format) to replay.', default='home2bin1_cam_verified.pkl')
     args = parser.parse_args()
 
     print('Starting robot')
     fa = FrankaArm()
     fa.reset_joints()
     execute_trajectory(fa, args)
-    #fa.reset_joints()
+    # fa.stop_skill()
+    # print(fa.is_skill_done())
+    # fa.reset_joints()
+    # fa.k
+    # fa.stop_skill()
+    # fa.reset_joints()
+    # adding cartesian move
+    print("Starting cartesian move for pickup")
+    orig_pose = fa.get_pose()
+    new_pose = orig_pose.copy()
+    new_pose.translation -= [0, 0, 0.275]
+    fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=True)
+    time.sleep(2)
+
+    # print("Starting cartesian move for pickup")
+    orig_pose = fa.get_pose()
+    new_pose = orig_pose.copy()
+    new_pose.translation += [0, 0, 0.275]
+    fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=True)
+    time.sleep(2)
+
+    fa.reset_joints()
