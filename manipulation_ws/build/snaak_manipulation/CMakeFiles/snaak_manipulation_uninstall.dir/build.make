@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation
+CMAKE_SOURCE_DIR = /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation
+CMAKE_BINARY_DIR = /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation
 
 # Utility rule file for snaak_manipulation_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/snaak_manipulation_uninstall.dir/compiler_depend.make
 include CMakeFiles/snaak_manipulation_uninstall.dir/progress.make
 
 CMakeFiles/snaak_manipulation_uninstall:
-	/usr/bin/cmake -P /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 snaak_manipulation_uninstall: CMakeFiles/snaak_manipulation_uninstall
 snaak_manipulation_uninstall: CMakeFiles/snaak_manipulation_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/snaak_manipulation_uninstall.dir/clean:
 .PHONY : CMakeFiles/snaak_manipulation_uninstall.dir/clean
 
 CMakeFiles/snaak_manipulation_uninstall.dir/depend:
-	cd /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles/snaak_manipulation_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles/snaak_manipulation_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/snaak_manipulation_uninstall.dir/depend
 

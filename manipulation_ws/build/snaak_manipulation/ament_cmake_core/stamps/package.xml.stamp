@@ -14,7 +14,7 @@
   <depend>rclpy</depend>
   <depend>geometry_msgs</depend>
   <depend>tf2</depend>
-  <depend>tf2__ros</depend>
+  <depend>tf2_ros</depend>
 
   <buildtool_depend>rosidl_default_generators</buildtool_depend>
   <exec_depend>rosidl_default_runtime</exec_depend>

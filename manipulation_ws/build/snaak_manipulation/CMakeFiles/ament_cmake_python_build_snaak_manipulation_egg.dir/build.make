@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation
+CMAKE_SOURCE_DIR = /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation
+CMAKE_BINARY_DIR = /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation
 
 # Utility rule file for ament_cmake_python_build_snaak_manipulation_egg.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_build_snaak_manipulation_egg.dir/compiler_
 include CMakeFiles/ament_cmake_python_build_snaak_manipulation_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_snaak_manipulation_egg:
-	cd /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/ament_cmake_python/snaak_manipulation && /usr/bin/python3 setup.py egg_info
+	cd /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/ament_cmake_python/snaak_manipulation && /usr/bin/python3 setup.py egg_info
 
 ament_cmake_python_build_snaak_manipulation_egg: CMakeFiles/ament_cmake_python_build_snaak_manipulation_egg
 ament_cmake_python_build_snaak_manipulation_egg: CMakeFiles/ament_cmake_python_build_snaak_manipulation_egg.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_build_snaak_manipulation_egg.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_build_snaak_manipulation_egg.dir/clean
 
 CMakeFiles/ament_cmake_python_build_snaak_manipulation_egg.dir/depend:
-	cd /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles/ament_cmake_python_build_snaak_manipulation_egg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles/ament_cmake_python_build_snaak_manipulation_egg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_build_snaak_manipulation_egg.dir/depend
 

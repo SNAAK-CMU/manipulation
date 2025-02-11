@@ -1,9 +1,9 @@
 {
   "package_name": "snaak_manipulation",
-  "output_dir": "/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_cpp/snaak_manipulation",
+  "output_dir": "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_cpp/snaak_manipulation",
   "template_dir": "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource",
   "idl_tuples": [
-    "/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation:action/FollowTrajectory.idl"
+    "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation:action/FollowTrajectory.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
@@ -90,7 +90,7 @@
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__builder.hpp.em",
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__struct.hpp.em",
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__traits.hpp.em",
-    "/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation/action/FollowTrajectory.idl",
+    "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation/action/FollowTrajectory.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl",

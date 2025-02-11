@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 import numpy as np
 import pickle, time
-# from frankapy import FrankaArm, SensorDataMessageType
-# from frankapy.proto_utils import sensor_proto2ros_msg, make_sensor_group_msg
-# from frankapy.proto import JointPositionSensorMessage, ShouldTerminateSensorMessage
+from frankapy import FrankaArm, SensorDataMessageType
+from frankapy.proto_utils import sensor_proto2ros_msg, make_sensor_group_msg
+from frankapy.proto import JointPositionSensorMessage, ShouldTerminateSensorMessage
 
 import rclpy
 from rclpy.action import ActionServer
@@ -24,7 +24,7 @@ class TrajectoryFollowerActionServer(Node):
             'follow_trajectory',
             self.execute_callback
         )
-        #self.fa = FrankaArm()
+        self.fa = FrankaArm(init_rclpy=False)
 
     def execute_callback(self, goal_handle):
 
@@ -32,30 +32,31 @@ class TrajectoryFollowerActionServer(Node):
         traj_file_path = self.traj_id_to_file(goal_handle.request.traj_id)
         self.get_logger().info(f'The file path you selected is {traj_file_path}')
         self.get_logger().info('Executing Trajectory...')
-        #self.execute_trajectory(self, traj_file_path)
+        self.execute_trajectory(traj_file_path)
 
         goal_handle.succeed()
         result = FollowTrajectory.Result()
-        # pose = self.fa.getPose()
-        # transform = Transform()
-        # transform.translation = Vector3(
-        #     x=pose.translation.x,
-        #     y=pose.translation.y,
-        #     z=pose.translation.z
-        # )
+        pose = self.fa.get_pose()
+        transform = Transform()
+        transform.translation = Vector3(
+            x=pose.translation[0],
+            y=pose.translation[1],
+            z=pose.translation[2]
+        )
 
-        # rotation_matrix = pose.rotation
+        rotation_matrix = pose.rotation
+        transformation_matrix = np.eye(4)
+        transformation_matrix[:3, :3] = rotation_matrix
 
-        # q = tf_transformations.quaternion_from_matrix(rotation_matrix)
+        q = tf_transformations.quaternion_from_matrix(transformation_matrix)
+        transform.rotation = Quaternion(
+            x=q[0],
+            y=q[1],
+            z=q[2],
+            w=q[3]
+        )
 
-        # transform.rotation = Quaternion(
-        #     x=q[0],
-        #     y=q[1],
-        #     z=q[2],
-        #     w=q[3]
-        # )
-
-        # result.end_pose = transform
+        result.end_pose = transform
         return result
         
 
@@ -75,7 +76,7 @@ class TrajectoryFollowerActionServer(Node):
         if pkl_file_name is None:
             raise Exception("Not a Valid Trajectory ID")
         
-        traj_file_path = os.path.join(package_share_directory, 'include', pkl_file_name)
+        traj_file_path = os.path.join(package_share_directory, pkl_file_name)
         return traj_file_path
 
     def execute_trajectory(self, traj_file_path):
@@ -96,16 +97,18 @@ class TrajectoryFollowerActionServer(Node):
         #fa.log_info('Initializing Sensor Publisher')
 
         # go to initial pose if needed, this is more a safety feature, should not be relied on
-        self.fa.goto_joints(joints_traj[1], duration=T, dynamic=False, buffer_time=5)
+        self.fa.goto_joints(joints_traj[0], duration=T, dynamic=False, buffer_time=5)
 
         # To ensure skill doesn't end before completing trajectory, make the buffer time much longer than needed
         self.fa.goto_joints(joints_traj[1], duration=T, dynamic=True, buffer_time=10)
         init_time = self.fa.get_time()
         for i in range(2, len(joints_traj)):
             traj_gen_proto_msg = JointPositionSensorMessage(
-                id=i, timestamp=fa.get_time() - init_time, 
+                id=i, timestamp=self.fa.get_time() - init_time, 
                 joints=joints_traj[i]
             )
+            self.get_logger().info(f'joint angles: {joints_traj[i]}')
+
             ros_msg = make_sensor_group_msg(
                 trajectory_generator_sensor_msg=sensor_proto2ros_msg(
                     traj_gen_proto_msg, SensorDataMessageType.JOINT_POSITION)
@@ -121,6 +124,8 @@ class TrajectoryFollowerActionServer(Node):
                 term_proto_msg, SensorDataMessageType.SHOULD_TERMINATE)
             )
         self.fa.publish_sensor_data(ros_msg)
+        self.fa._in_skill = False
+        self.fa.stop_skill()
 
 
 def main(args=None):

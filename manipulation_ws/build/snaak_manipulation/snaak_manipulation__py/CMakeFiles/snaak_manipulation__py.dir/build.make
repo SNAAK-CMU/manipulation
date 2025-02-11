@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation
+CMAKE_SOURCE_DIR = /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation
+CMAKE_BINARY_DIR = /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation
 
 # Utility rule file for snaak_manipulation__py.
 
@@ -154,8 +154,8 @@ rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesuppo
 rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/unique_identifier_msgs/msg/UUID.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/snaak_manipulation__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
+	cd /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/snaak_manipulation__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_introspection_c.c
@@ -187,10 +187,10 @@ snaak_manipulation__py/CMakeFiles/snaak_manipulation__py.dir/build: snaak_manipu
 .PHONY : snaak_manipulation__py/CMakeFiles/snaak_manipulation__py.dir/build
 
 snaak_manipulation__py/CMakeFiles/snaak_manipulation__py.dir/clean:
-	cd /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/snaak_manipulation__py && $(CMAKE_COMMAND) -P CMakeFiles/snaak_manipulation__py.dir/cmake_clean.cmake
+	cd /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/snaak_manipulation__py && $(CMAKE_COMMAND) -P CMakeFiles/snaak_manipulation__py.dir/cmake_clean.cmake
 .PHONY : snaak_manipulation__py/CMakeFiles/snaak_manipulation__py.dir/clean
 
 snaak_manipulation__py/CMakeFiles/snaak_manipulation__py.dir/depend:
-	cd /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/snaak_manipulation__py /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/snaak_manipulation__py /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/snaak_manipulation__py/CMakeFiles/snaak_manipulation__py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/snaak_manipulation__py /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/snaak_manipulation__py /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/snaak_manipulation__py/CMakeFiles/snaak_manipulation__py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : snaak_manipulation__py/CMakeFiles/snaak_manipulation__py.dir/depend
 

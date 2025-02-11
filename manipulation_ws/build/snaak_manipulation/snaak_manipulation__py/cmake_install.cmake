@@ -1,8 +1,8 @@
-# Install script for directory: /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/snaak_manipulation__py
+# Install script for directory: /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/snaak_manipulation__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/oberton/manipulation/manipulation_ws/install/snaak_manipulation")
+  set(CMAKE_INSTALL_PREFIX "/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
