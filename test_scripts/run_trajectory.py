@@ -92,17 +92,17 @@ if __name__ == "__main__":
     # fa.reset_joints()
     # adding cartesian move
     print("Starting cartesian move for pickup")
-    orig_pose = fa.get_pose()
-    new_pose = orig_pose.copy()
-    new_pose.translation -= [0, 0, 0.275]
-    fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=True)
-    time.sleep(2)
+    #orig_pose = fa.get_pose()
+    #new_pose = orig_pose.copy()
+    #new_pose.translation -= [0, 0, 0.275]
+    #fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=True)
+    #time.sleep(2)
 
     # print("Starting cartesian move for pickup")
-    orig_pose = fa.get_pose()
-    new_pose = orig_pose.copy()
-    new_pose.translation += [0, 0, 0.275]
-    fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=True)
-    time.sleep(2)
+    #orig_pose = fa.get_pose()
+    #new_pose = orig_pose.copy()
+    #new_pose.translation += [0, 0, 0.275]
+    #fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=True)
+    #time.sleep(2)
 
-    fa.reset_joints()
+    #fa.reset_joints()

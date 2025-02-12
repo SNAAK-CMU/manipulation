@@ -67,11 +67,11 @@ class TrajectoryFollowerActionServer(Node):
             case 0:
                 pkl_file_name = "home_assembly_traj.pkl"
             case 1:
-                pkl_file_name = "home_bin_1_traj.pkl"
+                pkl_file_name = "home2bin1_cam_verified.pkl"
             case 2:
-                pkl_file_name = "home_bin_2_traj.pkl"
+                pkl_file_name = "home2bin2_cam_verified.pkl"
             case 3:
-                pkl_file_name = "home_bin_3_traj.pkl"
+                pkl_file_name = "home2bin3_cam_verified.pkl"
         
         if pkl_file_name is None:
             raise Exception("Not a Valid Trajectory ID")
@@ -97,35 +97,35 @@ class TrajectoryFollowerActionServer(Node):
         #fa.log_info('Initializing Sensor Publisher')
 
         # go to initial pose if needed, this is more a safety feature, should not be relied on
-        self.fa.goto_joints(joints_traj[1], duration=T, dynamic=False, buffer_time=5)
+        self.fa.goto_joints(joints_traj[0])
+        self.fa.goto_joints(joints_traj[-1])
+        # # To ensure skill doesn't end before completing trajectory, make the buffer time much longer than needed
+        # self.fa.goto_joints(joints_traj[1], duration=T, dynamic=True, buffer_time=10)
+        # init_time = self.fa.get_time()
+        # for i in range(2, len(joints_traj)):
+        #     traj_gen_proto_msg = JointPositionSensorMessage(
+        #         id=i, timestamp=self.fa.get_time() - init_time, 
+        #         joints=joints_traj[i]
+        #     )
+        #     self.get_logger().info(f'joint angles: {joints_traj[i]}')
 
-        # To ensure skill doesn't end before completing trajectory, make the buffer time much longer than needed
-        self.fa.goto_joints(joints_traj[1], duration=T, dynamic=True, buffer_time=10)
-        init_time = self.fa.get_time()
-        for i in range(2, len(joints_traj)):
-            traj_gen_proto_msg = JointPositionSensorMessage(
-                id=i, timestamp=self.fa.get_time() - init_time, 
-                joints=joints_traj[i]
-            )
-            self.get_logger().info(f'joint angles: {joints_traj[i]}')
-
-            ros_msg = make_sensor_group_msg(
-                trajectory_generator_sensor_msg=sensor_proto2ros_msg(
-                    traj_gen_proto_msg, SensorDataMessageType.JOINT_POSITION)
-            )
+        #     ros_msg = make_sensor_group_msg(
+        #         trajectory_generator_sensor_msg=sensor_proto2ros_msg(
+        #             traj_gen_proto_msg, SensorDataMessageType.JOINT_POSITION)
+        #     )
             
-            #fa.log_info('Publishing: ID {}'.format(traj_gen_proto_msg.id))
-            self.fa.publish_sensor_data(ros_msg)
-            time.sleep(dt)
+        #     #fa.log_info('Publishing: ID {}'.format(traj_gen_proto_msg.id))
+        #     self.fa.publish_sensor_data(ros_msg)
+        #     time.sleep(dt)
     
-        term_proto_msg = ShouldTerminateSensorMessage(timestamp=self.fa.get_time() - init_time, should_terminate=True)
-        ros_msg = make_sensor_group_msg(
-            termination_handler_sensor_msg=sensor_proto2ros_msg(
-                term_proto_msg, SensorDataMessageType.SHOULD_TERMINATE)
-            )
-        self.fa.publish_sensor_data(ros_msg)
-        self.fa._in_skill = False
-        self.fa.stop_skill()
+        # term_proto_msg = ShouldTerminateSensorMessage(timestamp=self.fa.get_time() - init_time, should_terminate=True)
+        # ros_msg = make_sensor_group_msg(
+        #     termination_handler_sensor_msg=sensor_proto2ros_msg(
+        #         term_proto_msg, SensorDataMessageType.SHOULD_TERMINATE)
+        #     )
+        # self.fa.publish_sensor_data(ros_msg)
+        # self.fa._in_skill = False
+        # self.fa.stop_skill()
 
 
 def main(args=None):
