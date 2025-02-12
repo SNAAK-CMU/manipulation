@@ -30,34 +30,39 @@ class TrajectoryFollowerActionServer(Node):
 
         self.get_logger().info("Opening .pkl File...")
         traj_file_path = self.traj_id_to_file(goal_handle.request.traj_id)
-        self.get_logger().info(f'The file path you selected is {traj_file_path}')
-        self.get_logger().info('Executing Trajectory...')
-        self.execute_trajectory(traj_file_path)
-
-        goal_handle.succeed()
+        
         result = FollowTrajectory.Result()
-        pose = self.fa.get_pose()
-        transform = Transform()
-        transform.translation = Vector3(
-            x=pose.translation[0],
-            y=pose.translation[1],
-            z=pose.translation[2]
-        )
 
-        rotation_matrix = pose.rotation
-        transformation_matrix = np.eye(4)
-        transformation_matrix[:3, :3] = rotation_matrix
+        if traj_file_path is None:
+            goal_handle.abort()
+            return result
+        else:
+            self.get_logger().info('Executing Trajectory...')
+            self.execute_trajectory(traj_file_path)
 
-        q = tf_transformations.quaternion_from_matrix(transformation_matrix)
-        transform.rotation = Quaternion(
-            x=q[0],
-            y=q[1],
-            z=q[2],
-            w=q[3]
-        )
+            pose = self.fa.get_pose()
+            transform = Transform()
+            transform.translation = Vector3(
+                x=pose.translation[0],
+                y=pose.translation[1],
+                z=pose.translation[2]
+            )
 
-        result.end_pose = transform
-        return result
+            rotation_matrix = pose.rotation
+            transformation_matrix = np.eye(4)
+            transformation_matrix[:3, :3] = rotation_matrix
+
+            q = tf_transformations.quaternion_from_matrix(transformation_matrix)
+            transform.rotation = Quaternion(
+                x=q[0],
+                y=q[1],
+                z=q[2],
+                w=q[3]
+            )
+
+            goal_handle.succeed()
+            result.end_pose = transform
+            return result
         
 
     def traj_id_to_file(self, traj_id):
@@ -74,7 +79,8 @@ class TrajectoryFollowerActionServer(Node):
                 pkl_file_name = "home2bin3_cam_verified.pkl"
         
         if pkl_file_name is None:
-            raise Exception("Not a Valid Trajectory ID")
+            self.get_logger().info('Invalid Trajectory Entered')
+            return None
         
         traj_file_path = os.path.join(package_share_directory, pkl_file_name)
         return traj_file_path
@@ -130,8 +136,14 @@ class TrajectoryFollowerActionServer(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    trajecty_follower_action_server = TrajectoryFollowerActionServer()
-    rclpy.spin(trajecty_follower_action_server)
+    trajectory_follower_action_server = TrajectoryFollowerActionServer()
+    try:
+        rclpy.spin(trajectory_follower_action_server)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        trajectory_follower_action_server.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == '__main__':
