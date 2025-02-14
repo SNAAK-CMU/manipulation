@@ -33,7 +33,7 @@ class TrajectoryFollowerActionServer(Node):
         
         result = FollowTrajectory.Result()
 
-        if traj_file_path is None:
+        if traj_file_path is None or not self.fa.is_skill_done:
             goal_handle.abort()
             return result
         else:
