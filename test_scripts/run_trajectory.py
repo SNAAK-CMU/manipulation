@@ -77,32 +77,47 @@ def execute_trajectory(fa, args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--trajectory_pickle', '-t', type=str, #required=True,
-                        help='Path to trajectory (in pickle format) to replay.', default='home2bin1_cam_verified.pkl')
+                        help='Path to trajectory (in pickle format) to replay.', default='home2bin3_cam_verified.pkl')
     args = parser.parse_args()
 
     print('Starting robot')
     fa = FrankaArm()
+
+    # goto home
     fa.reset_joints()
+
+    # execute trajectory from file in args or default
     execute_trajectory(fa, args)
+    # fa.reset_joints()
+
+    # execute trajectory in reverse
+    # joints_trav_rev = joints_traj[::-1]
+    # execute_trajectory(fa, joints_trav_rev)
+    # execute_trajectory(fa, joints_traj)
+
+    # test stuff
+    # fa.reset_joints()
     # fa.stop_skill()
-    # print(fa.is_skill_done())
+    print(fa.is_skill_done()) # timing is off, robot goal completed is called before the robot even starts moving.
     # fa.reset_joints()
     # fa.k
     # fa.stop_skill()
     # fa.reset_joints()
+
     # adding cartesian move
-    print("Starting cartesian move for pickup")
-    #orig_pose = fa.get_pose()
-    #new_pose = orig_pose.copy()
-    #new_pose.translation -= [0, 0, 0.275]
-    #fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=True)
-    #time.sleep(2)
+    fa.log_info("Starting cartesian move for pickup - go down")
+    orig_pose = fa.get_pose()
+    new_pose = orig_pose.copy()
+    new_pose.translation -= [0, 0, 0.215]
+    fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=True)
+    time.sleep(2)
 
-    # print("Starting cartesian move for pickup")
-    #orig_pose = fa.get_pose()
-    #new_pose = orig_pose.copy()
-    #new_pose.translation += [0, 0, 0.275]
-    #fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=True)
-    #time.sleep(2)
+    fa.log_info("Starting cartesian move for pickup - go up")
+    orig_pose = fa.get_pose()
+    new_pose = orig_pose.copy()
+    new_pose.translation += [0, 0, 0.2]
+    fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=True)
+    time.sleep(2)
 
-    #fa.reset_joints()
+    # execute_trajectory(fa, joints_traj)
+    fa.reset_joints()
