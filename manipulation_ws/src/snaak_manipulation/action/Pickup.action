@@ -1,0 +1,8 @@
+int32 x
+int32 y
+
+float32 depth
+
+---
+geometry_msgs/Transform end_pose
+bool success

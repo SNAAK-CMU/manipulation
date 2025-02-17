@@ -19,6 +19,7 @@ find_package(tf2_ros REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "action/FollowTrajectory.action"
+  "action/Pickup.action"
   DEPENDENCIES geometry_msgs
 )
 

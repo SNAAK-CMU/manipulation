@@ -8,25 +8,39 @@ from frankapy.proto import JointPositionSensorMessage, ShouldTerminateSensorMess
 import rclpy
 from rclpy.action import ActionServer
 from rclpy.node import Node
-from snaak_manipulation.action import FollowTrajectory
+from snaak_manipulation.action import FollowTrajectory, Pickup
 
 import os
 from ament_index_python.packages import get_package_share_directory
 from geometry_msgs.msg import Transform, Vector3, Quaternion
 import tf_transformations
+import logging
 
-class TrajectoryFollowerActionServer(Node):
+class TrajectoryFollowerActionServer(Node): #why not call this manipulation_node
     def __init__(self):
         super().__init__('trajectory_follower_action_server')
         self._action_server = ActionServer(
             self,
             FollowTrajectory,
             'follow_trajectory',
-            self.execute_callback
+            self.execute_trajectory_callback
         )
-        self.fa = FrankaArm(init_rclpy=False)
 
-    def execute_callback(self, goal_handle):
+        super().__init__('pickup_action_server')
+        self._action_server = ActionServer(
+            self,
+            Pickup,
+            'pickup',
+            self.execute_pickup_callback
+        )
+
+        self.fa = FrankaArm(init_rclpy=False)
+    
+        self.get_logger().info("Started Manipulation node")
+
+
+
+    def execute_trajectory_callback(self, goal_handle):
 
         self.get_logger().info("Opening .pkl File...")
         traj_file_path = self.traj_id_to_file(goal_handle.request.traj_id)
@@ -63,7 +77,79 @@ class TrajectoryFollowerActionServer(Node):
             goal_handle.succeed()
             result.end_pose = transform
             return result
-        
+    
+    def execute_pikcup_callback(self, goal_handle):
+
+        # first move to x, y
+        # rotate to reset the end effector downwards
+        # move down to pick up
+        # send service/action call to start vaccuum and wait for response
+        # move up
+
+        success = False
+        result = Pickup.result()
+
+        try:
+            destination_x = goal_handle.request.x
+            destination_y = goal_handle.request.y
+            depth = goal_handle.request.depth
+
+            # move to x, y
+            new_pose = self.fa.get_pose()
+            new_pose.translation = [destination_x, destination_y, 0]
+            new_pose.rotation = np.identity(3)
+            self.fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=True)
+            self.get_logger().info("Moving above grasp point...")
+            time.sleep(2) # replace this with checking if the robot is out of skill
+
+            # move down
+            new_pose = self.fa.get_pose()
+            new_pose.translation -= [0, 0, depth]
+            new_pose.rotation = np.identity(3)
+            self.fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=True)
+            self.get_logger().info("Moving Down...")
+            time.sleep(2) # replace this with checking if the robot is out of skill
+
+            # call the pneumatic node service
+            # self.get_logger("Grasped!")
+            
+            # move up
+            new_pose = self.fa.get_pose()
+            new_pose.translation += [0, 0, depth]
+            new_pose.rotation = np.identity(3)
+            self.fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=True)
+            self.get_logger().info("Moving up...")
+            time.sleep(2) # replace this with checking if the robot is out of skill
+
+            success=True
+
+        except Exception as e:
+            self.get_logger().error(f"Error Occured during pickup motion {e} ")
+            success = False
+            raise e
+        finally:
+            result.success = success
+            pose = self.fa.get_pose()
+            transform = Transform()
+            transform.translation = Vector3(
+                x=pose.translation[0],
+                y=pose.translation[1],
+                z=pose.translation[2]
+            )
+
+            rotation_matrix = pose.rotation
+            transformation_matrix = np.eye(4)
+            transformation_matrix[:3, :3] = rotation_matrix
+
+            q = tf_transformations.quaternion_from_matrix(transformation_matrix)
+            transform.rotation = Quaternion(
+                x=q[0],
+                y=q[1],
+                z=q[2],
+                w=q[3]
+            )
+            result.end_pose = transform
+            return result  
 
     def traj_id_to_file(self, traj_id):
         package_share_directory = get_package_share_directory('snaak_manipulation')
