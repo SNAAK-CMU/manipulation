@@ -360,11 +360,19 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/snaak_manipulation/action" TYPE FILE FILES "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation/action/Pickup.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/snaak_manipulation/action" TYPE FILE FILES "/home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation/action/FollowTrajectory.action")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/snaak_manipulation" TYPE PROGRAM FILES "/home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation/scripts/follow_trajectory.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/snaak_manipulation/action" TYPE FILE FILES "/home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation/action/Pickup.action")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/snaak_manipulation" TYPE PROGRAM FILES "/home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation/scripts/manipulation_actions_node.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

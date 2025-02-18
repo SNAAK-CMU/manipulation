@@ -1,2 +1,4 @@
 action/FollowTrajectory.action
 action/FollowTrajectory.idl
+action/Pickup.action
+action/Pickup.idl

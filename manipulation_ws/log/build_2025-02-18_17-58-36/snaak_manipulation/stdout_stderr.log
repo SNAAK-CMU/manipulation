@@ -1,0 +1,264 @@
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclpy: 3.3.15 (/opt/ros/humble/share/rclpy/cmake)
+-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+-- Found tf2: 0.25.11 (/opt/ros/humble/share/tf2/cmake)
+-- Found tf2_ros: 0.25.11 (/opt/ros/humble/share/tf2_ros/cmake)
+-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation
+[  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  5%] Built target ament_cmake_python_copy_snaak_manipulation
+running egg_info
+writing snaak_manipulation.egg-info/PKG-INFO
+writing dependency_links to snaak_manipulation.egg-info/dependency_links.txt
+writing top-level names to snaak_manipulation.egg-info/top_level.txt
+reading manifest file 'snaak_manipulation.egg-info/SOURCES.txt'
+writing manifest file 'snaak_manipulation.egg-info/SOURCES.txt'
+[  5%] Built target ament_cmake_python_build_snaak_manipulation_egg
+[35m[1mConsolidate compiler generated dependencies of target snaak_manipulation__rosidl_generator_c[0m
+[  7%] [32mBuilding C object CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.o[0m
+[ 10%] Built target snaak_manipulation__cpp
+[ 17%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 17%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[ 17%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[ 20%] [32m[1mLinking C shared library libsnaak_manipulation__rosidl_generator_c.so[0m
+[ 20%] Built target snaak_manipulation__rosidl_generator_c
+[ 28%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[ 28%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 28%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[35m[1mConsolidate compiler generated dependencies of target snaak_manipulation__rosidl_typesupport_cpp[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/snaak_manipulation__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/snaak_manipulation/action/pickup__type_support.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/snaak_manipulation__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/snaak_manipulation/action/follow_trajectory__type_support.cpp.o[0m
+[35m[1mConsolidate compiler generated dependencies of target snaak_manipulation__rosidl_typesupport_introspection_cpp[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/snaak_manipulation__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/snaak_manipulation/action/detail/follow_trajectory__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/snaak_manipulation__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/snaak_manipulation/action/detail/pickup__type_support.cpp.o[0m
+[35m[1mConsolidate compiler generated dependencies of target snaak_manipulation__rosidl_typesupport_c[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/snaak_manipulation__rosidl_typesupport_c.dir/rosidl_typesupport_c/snaak_manipulation/action/follow_trajectory__type_support.cpp.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/snaak_manipulation__rosidl_typesupport_c.dir/rosidl_typesupport_c/snaak_manipulation/action/pickup__type_support.cpp.o[0m
+[35m[1mConsolidate compiler generated dependencies of target snaak_manipulation__rosidl_typesupport_fastrtps_cpp[0m
+[ 46%] [32m[1mLinking CXX shared library libsnaak_manipulation__rosidl_typesupport_c.so[0m
+[ 48%] [32mBuilding CXX object CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/snaak_manipulation/action/detail/dds_fastrtps/follow_trajectory__type_support.cpp.o[0m
+[ 51%] [32mBuilding CXX object CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/snaak_manipulation/action/detail/dds_fastrtps/pickup__type_support.cpp.o[0m
+[ 51%] Built target snaak_manipulation__rosidl_typesupport_c
+[35m[1mConsolidate compiler generated dependencies of target snaak_manipulation__rosidl_typesupport_introspection_c[0m
+[ 53%] [32mBuilding C object CMakeFiles/snaak_manipulation__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/snaak_manipulation/action/detail/follow_trajectory__type_support.c.o[0m
+[ 56%] [32mBuilding C object CMakeFiles/snaak_manipulation__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/snaak_manipulation/action/detail/pickup__type_support.c.o[0m
+[35m[1mConsolidate compiler generated dependencies of target snaak_manipulation__rosidl_typesupport_fastrtps_c[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__type_support_c.cpp.o[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp.o[0m
+[ 64%] [32m[1mLinking C shared library libsnaak_manipulation__rosidl_typesupport_introspection_c.so[0m
+[ 64%] Built target snaak_manipulation__rosidl_typesupport_introspection_c
+[ 66%] [32m[1mLinking CXX shared library libsnaak_manipulation__rosidl_typesupport_cpp.so[0m
+[ 66%] Built target snaak_manipulation__rosidl_typesupport_cpp
+[ 69%] [32m[1mLinking CXX shared library libsnaak_manipulation__rosidl_typesupport_introspection_cpp.so[0m
+[ 71%] [32m[1mLinking CXX shared library libsnaak_manipulation__rosidl_typesupport_fastrtps_c.so[0m
+[ 71%] Built target snaak_manipulation__rosidl_typesupport_introspection_cpp
+[ 74%] [32m[1mLinking CXX shared library libsnaak_manipulation__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 74%] Built target snaak_manipulation__rosidl_typesupport_fastrtps_c
+[ 74%] Built target snaak_manipulation__rosidl_typesupport_fastrtps_cpp
+[ 74%] Built target snaak_manipulation
+[ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 76%] Built target snaak_manipulation__py
+[35m[1mConsolidate compiler generated dependencies of target snaak_manipulation__rosidl_generator_py[0m
+[ 82%] [32mBuilding C object CMakeFiles/snaak_manipulation__rosidl_generator_py.dir/rosidl_generator_py/snaak_manipulation/action/_follow_trajectory_s.c.o[0m
+[ 82%] [32mBuilding C object CMakeFiles/snaak_manipulation__rosidl_generator_py.dir/rosidl_generator_py/snaak_manipulation/action/_pickup_s.c.o[0m
+[ 84%] [32m[1mLinking C shared library rosidl_generator_py/snaak_manipulation/libsnaak_manipulation__rosidl_generator_py.so[0m
+[ 84%] Built target snaak_manipulation__rosidl_generator_py
+[35m[1mConsolidate compiler generated dependencies of target snaak_manipulation__rosidl_typesupport_fastrtps_c__pyext[0m
+[35m[1mConsolidate compiler generated dependencies of target snaak_manipulation__rosidl_typesupport_introspection_c__pyext[0m
+[35m[1mConsolidate compiler generated dependencies of target snaak_manipulation__rosidl_typesupport_c__pyext[0m
+[ 87%] [32mBuilding C object CMakeFiles/snaak_manipulation__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 89%] [32mBuilding C object CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/snaak_manipulation__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_c.c.o[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/snaak_manipulation/snaak_manipulation_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/snaak_manipulation/snaak_manipulation_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/snaak_manipulation/snaak_manipulation_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] Built target snaak_manipulation__rosidl_typesupport_c__pyext
+[100%] Built target snaak_manipulation__rosidl_typesupport_introspection_c__pyext
+[100%] Built target snaak_manipulation__rosidl_typesupport_fastrtps_c__pyext
+-- Install configuration: ""
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/ament_index/resource_index/rosidl_interfaces/snaak_manipulation
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/msg
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/msg/rosidl_generator_c__visibility_control.h
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/pickup.h
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/follow_trajectory__functions.c
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/pickup__functions.c
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/pickup__struct.h
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/follow_trajectory__struct.h
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/pickup__functions.h
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/follow_trajectory__functions.h
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/follow_trajectory__type_support.h
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/pickup__type_support.h
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/follow_trajectory.h
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/environment/library_path.sh
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/environment/library_path.dsv
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/libsnaak_manipulation__rosidl_generator_c.so
+-- Set runtime path of "/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/libsnaak_manipulation__rosidl_generator_c.so" to ""
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/msg
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/pickup__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/follow_trajectory__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/libsnaak_manipulation__rosidl_typesupport_fastrtps_c.so
+-- Set runtime path of "/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/libsnaak_manipulation__rosidl_typesupport_fastrtps_c.so" to ""
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/msg
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/follow_trajectory__type_support.hpp
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/pickup__builder.hpp
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/pickup__struct.hpp
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/follow_trajectory__builder.hpp
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/follow_trajectory__traits.hpp
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/pickup__traits.hpp
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/pickup__type_support.hpp
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/follow_trajectory__struct.hpp
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/follow_trajectory.hpp
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/pickup.hpp
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/msg
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/dds_fastrtps
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/pickup__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/follow_trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/libsnaak_manipulation__rosidl_typesupport_fastrtps_cpp.so
+-- Set runtime path of "/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/libsnaak_manipulation__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/msg
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/pickup__type_support.c
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/pickup__rosidl_typesupport_introspection_c.h
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/follow_trajectory__rosidl_typesupport_introspection_c.h
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/follow_trajectory__type_support.c
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/libsnaak_manipulation__rosidl_typesupport_introspection_c.so
+-- Set runtime path of "/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/libsnaak_manipulation__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/libsnaak_manipulation__rosidl_typesupport_c.so
+-- Set runtime path of "/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/libsnaak_manipulation__rosidl_typesupport_c.so" to ""
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/pickup__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/follow_trajectory__type_support.cpp
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/pickup__type_support.cpp
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/include/snaak_manipulation/snaak_manipulation/action/detail/follow_trajectory__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/libsnaak_manipulation__rosidl_typesupport_introspection_cpp.so
+-- Set runtime path of "/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/libsnaak_manipulation__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/libsnaak_manipulation__rosidl_typesupport_cpp.so
+-- Set runtime path of "/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/libsnaak_manipulation__rosidl_typesupport_cpp.so" to ""
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/environment/pythonpath.sh
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/environment/pythonpath.dsv
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation-0.0.1-py3.10.egg-info
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation-0.0.1-py3.10.egg-info/PKG-INFO
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation-0.0.1-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation-0.0.1-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation-0.0.1-py3.10.egg-info/top_level.txt
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/snaak_manipulation_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_c.c
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/__init__.py
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/libsnaak_manipulation__rosidl_generator_py.so
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/snaak_manipulation_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/snaak_manipulation_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/action
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/action/_follow_trajectory.py
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/action/_pickup.py
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/action/__init__.py
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/action/_follow_trajectory_s.c
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/action/_pickup_s.c
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_introspection_c.c
+Listing '/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation'...
+Compiling '/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/__init__.py'...
+Listing '/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/action'...
+Compiling '/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/action/__init__.py'...
+Compiling '/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/action/_follow_trajectory.py'...
+Compiling '/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/action/_pickup.py'...
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/snaak_manipulation_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Set runtime path of "/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/snaak_manipulation_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/snaak_manipulation_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Set runtime path of "/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/snaak_manipulation_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/snaak_manipulation_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Set runtime path of "/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/local/lib/python3.10/dist-packages/snaak_manipulation/snaak_manipulation_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/libsnaak_manipulation__rosidl_generator_py.so
+-- Set runtime path of "/home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/libsnaak_manipulation__rosidl_generator_py.so" to ""
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/action/FollowTrajectory.idl
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/action/Pickup.idl
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/action/FollowTrajectory.action
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/action/Pickup.action
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/lib/snaak_manipulation/manipulation_actions_node.py
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation//home_bin_1_traj.pkl
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation//home2bin3_cam_verified.pkl
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation//home2bin1_cam_verified.pkl
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation//home2bin2_cam_verified.pkl
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation//home_bin_3_traj.pkl
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation//home_bin_2_traj.pkl
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation//home_assembly_traj.pkl
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/ament_index/resource_index/package_run_dependencies/snaak_manipulation
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/ament_index/resource_index/parent_prefix_path/snaak_manipulation
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/environment/ament_prefix_path.sh
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/environment/path.sh
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/environment/path.dsv
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/local_setup.bash
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/local_setup.sh
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/local_setup.zsh
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/local_setup.dsv
+-- Installing: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/package.dsv
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/ament_index/resource_index/packages/snaak_manipulation
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/export_snaak_manipulation__rosidl_generator_cExport.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/export_snaak_manipulation__rosidl_generator_cExport-noconfig.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/export_snaak_manipulation__rosidl_typesupport_fastrtps_cExport.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/export_snaak_manipulation__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/export_snaak_manipulation__rosidl_generator_cppExport.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/export_snaak_manipulation__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/export_snaak_manipulation__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/snaak_manipulation__rosidl_typesupport_introspection_cExport.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/snaak_manipulation__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/snaak_manipulation__rosidl_typesupport_cExport.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/snaak_manipulation__rosidl_typesupport_cExport-noconfig.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/snaak_manipulation__rosidl_typesupport_introspection_cppExport.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/snaak_manipulation__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/snaak_manipulation__rosidl_typesupport_cppExport.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/snaak_manipulation__rosidl_typesupport_cppExport-noconfig.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/export_snaak_manipulation__rosidl_generator_pyExport.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/export_snaak_manipulation__rosidl_generator_pyExport-noconfig.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/rosidl_cmake-extras.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/snaak_manipulationConfig.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/cmake/snaak_manipulationConfig-version.cmake
+-- Up-to-date: /home/snaak/Documents/manipulation/manipulation_ws/install/snaak_manipulation/share/snaak_manipulation/package.xml

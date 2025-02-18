@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from snaak_manipulation/action/Pickup.action
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Transform.idl"
+
+module snaak_manipulation {
+  module action {
+    struct Pickup_Goal {
+      float x;
+
+      float y;
+
+      float depth;
+    };
+    struct Pickup_Result {
+      geometry_msgs::msg::Transform end_pose;
+    };
+    struct Pickup_Feedback {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

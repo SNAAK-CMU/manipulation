@@ -78,6 +78,7 @@ rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory
 rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource/srv__rosidl_typesupport_fastrtps_c.h.em
 rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource/srv__type_support_c.cpp.em
 rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/snaak_manipulation/action/FollowTrajectory.idl
+rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/snaak_manipulation/action/Pickup.idl
 rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -151,6 +152,12 @@ rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory
 rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__type_support_c.cpp: rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__type_support_c.cpp
 
+rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp: rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp
+
 CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__type_support_c.cpp.o: CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__type_support_c.cpp
 CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__type_support_c.cpp.o: CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
@@ -165,14 +172,30 @@ CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__type_support_c.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__type_support_c.cpp -o CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__type_support_c.cpp.s
 
+CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp.o: CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp
+CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp.o: CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp.o -MF CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp.o.d -o CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp.o -c /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp
+
+CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp > CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp.i
+
+CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp -o CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp.s
+
 # Object files for target snaak_manipulation__rosidl_typesupport_fastrtps_c
 snaak_manipulation__rosidl_typesupport_fastrtps_c_OBJECTS = \
-"CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__type_support_c.cpp.o"
+"CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__type_support_c.cpp.o" \
+"CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp.o"
 
 # External object files for target snaak_manipulation__rosidl_typesupport_fastrtps_c
 snaak_manipulation__rosidl_typesupport_fastrtps_c_EXTERNAL_OBJECTS =
 
 libsnaak_manipulation__rosidl_typesupport_fastrtps_c.so: CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__type_support_c.cpp.o
+libsnaak_manipulation__rosidl_typesupport_fastrtps_c.so: CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp.o
 libsnaak_manipulation__rosidl_typesupport_fastrtps_c.so: CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/build.make
 libsnaak_manipulation__rosidl_typesupport_fastrtps_c.so: libsnaak_manipulation__rosidl_generator_c.so
 libsnaak_manipulation__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so
@@ -192,7 +215,7 @@ libsnaak_manipulation__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/lib
 libsnaak_manipulation__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libsnaak_manipulation__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librcutils.so
 libsnaak_manipulation__rosidl_typesupport_fastrtps_c.so: CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libsnaak_manipulation__rosidl_typesupport_fastrtps_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libsnaak_manipulation__rosidl_typesupport_fastrtps_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -205,6 +228,8 @@ CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/clean:
 
 CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/follow_trajectory__type_support_c.cpp
+CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/snaak_manipulation/action/detail/pickup__type_support_c.cpp
 	cd /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c.dir/depend
 

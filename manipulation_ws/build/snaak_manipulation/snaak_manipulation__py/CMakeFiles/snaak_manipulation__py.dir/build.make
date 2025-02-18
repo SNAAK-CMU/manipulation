@@ -70,8 +70,10 @@ snaak_manipulation__py/CMakeFiles/snaak_manipulation__py: rosidl_generator_py/sn
 snaak_manipulation__py/CMakeFiles/snaak_manipulation__py: rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_introspection_c.c
 snaak_manipulation__py/CMakeFiles/snaak_manipulation__py: rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_c.c
 snaak_manipulation__py/CMakeFiles/snaak_manipulation__py: rosidl_generator_py/snaak_manipulation/action/_follow_trajectory.py
+snaak_manipulation__py/CMakeFiles/snaak_manipulation__py: rosidl_generator_py/snaak_manipulation/action/_pickup.py
 snaak_manipulation__py/CMakeFiles/snaak_manipulation__py: rosidl_generator_py/snaak_manipulation/action/__init__.py
 snaak_manipulation__py/CMakeFiles/snaak_manipulation__py: rosidl_generator_py/snaak_manipulation/action/_follow_trajectory_s.c
+snaak_manipulation__py/CMakeFiles/snaak_manipulation__py: rosidl_generator_py/snaak_manipulation/action/_pickup_s.c
 
 rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -87,6 +89,7 @@ rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesuppo
 rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/snaak_manipulation/action/FollowTrajectory.idl
+rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/snaak_manipulation/action/Pickup.idl
 rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -166,11 +169,17 @@ rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesuppo
 rosidl_generator_py/snaak_manipulation/action/_follow_trajectory.py: rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/snaak_manipulation/action/_follow_trajectory.py
 
+rosidl_generator_py/snaak_manipulation/action/_pickup.py: rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/snaak_manipulation/action/_pickup.py
+
 rosidl_generator_py/snaak_manipulation/action/__init__.py: rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/snaak_manipulation/action/__init__.py
 
 rosidl_generator_py/snaak_manipulation/action/_follow_trajectory_s.c: rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/snaak_manipulation/action/_follow_trajectory_s.c
+
+rosidl_generator_py/snaak_manipulation/action/_pickup_s.c: rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/snaak_manipulation/action/_pickup_s.c
 
 snaak_manipulation__py: rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_c.c
 snaak_manipulation__py: rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c
@@ -178,6 +187,8 @@ snaak_manipulation__py: rosidl_generator_py/snaak_manipulation/_snaak_manipulati
 snaak_manipulation__py: rosidl_generator_py/snaak_manipulation/action/__init__.py
 snaak_manipulation__py: rosidl_generator_py/snaak_manipulation/action/_follow_trajectory.py
 snaak_manipulation__py: rosidl_generator_py/snaak_manipulation/action/_follow_trajectory_s.c
+snaak_manipulation__py: rosidl_generator_py/snaak_manipulation/action/_pickup.py
+snaak_manipulation__py: rosidl_generator_py/snaak_manipulation/action/_pickup_s.c
 snaak_manipulation__py: snaak_manipulation__py/CMakeFiles/snaak_manipulation__py
 snaak_manipulation__py: snaak_manipulation__py/CMakeFiles/snaak_manipulation__py.dir/build.make
 .PHONY : snaak_manipulation__py

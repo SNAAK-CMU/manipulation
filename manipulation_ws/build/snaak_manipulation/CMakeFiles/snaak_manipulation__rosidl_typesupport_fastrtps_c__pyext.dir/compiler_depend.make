@@ -250,8 +250,17 @@ CMakeFiles/snaak_manipulation__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_g
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
   /opt/ros/humble/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.h \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
-  rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.h
+  rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.h \
+  rosidl_generator_c/snaak_manipulation/action/detail/pickup__type_support.h \
+  rosidl_generator_c/snaak_manipulation/action/detail/pickup__struct.h \
+  rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.h
 
+
+rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.h:
+
+rosidl_generator_c/snaak_manipulation/action/detail/pickup__struct.h:
+
+rosidl_generator_c/snaak_manipulation/action/detail/pickup__type_support.h:
 
 rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.h:
 

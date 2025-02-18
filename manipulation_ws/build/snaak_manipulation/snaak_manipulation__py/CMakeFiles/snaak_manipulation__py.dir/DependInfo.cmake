@@ -17,6 +17,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_py/snaak_manipulation/action/__init__.py" "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_py/snaak_manipulation/action/_follow_trajectory.py" "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_py/snaak_manipulation/action/_follow_trajectory_s.c" "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_py/snaak_manipulation/action/_pickup.py" "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_py/snaak_manipulation/action/_pickup_s.c" "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_py/snaak_manipulation/_snaak_manipulation_s.ep.rosidl_typesupport_fastrtps_c.c"
   )
 
 

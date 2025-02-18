@@ -71,6 +71,11 @@ CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/acti
 CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/follow_trajectory__struct.hpp
 CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/follow_trajectory__traits.hpp
 CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/follow_trajectory__type_support.hpp
+CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/pickup.hpp
+CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__builder.hpp
+CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__struct.hpp
+CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__traits.hpp
+CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__type_support.hpp
 CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -89,6 +94,7 @@ rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/h
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: rosidl_adapter/snaak_manipulation/action/FollowTrajectory.idl
+rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: rosidl_adapter/snaak_manipulation/action/Pickup.idl
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -171,12 +177,32 @@ rosidl_generator_cpp/snaak_manipulation/action/detail/follow_trajectory__traits.
 rosidl_generator_cpp/snaak_manipulation/action/detail/follow_trajectory__type_support.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/detail/follow_trajectory__type_support.hpp
 
+rosidl_generator_cpp/snaak_manipulation/action/pickup.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/pickup.hpp
+
+rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__builder.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__builder.hpp
+
+rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__struct.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__struct.hpp
+
+rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__traits.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__traits.hpp
+
+rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__type_support.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__type_support.hpp
+
 snaak_manipulation__cpp: CMakeFiles/snaak_manipulation__cpp
 snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/follow_trajectory__builder.hpp
 snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/follow_trajectory__struct.hpp
 snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/follow_trajectory__traits.hpp
 snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/follow_trajectory__type_support.hpp
+snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__builder.hpp
+snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__struct.hpp
+snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__traits.hpp
+snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__type_support.hpp
 snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/pickup.hpp
 snaak_manipulation__cpp: CMakeFiles/snaak_manipulation__cpp.dir/build.make
 .PHONY : snaak_manipulation__cpp
 

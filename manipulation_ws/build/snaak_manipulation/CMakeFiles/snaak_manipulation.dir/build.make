@@ -67,6 +67,7 @@ include CMakeFiles/snaak_manipulation.dir/compiler_depend.make
 include CMakeFiles/snaak_manipulation.dir/progress.make
 
 CMakeFiles/snaak_manipulation: /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation/action/FollowTrajectory.action
+CMakeFiles/snaak_manipulation: /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation/action/Pickup.action
 CMakeFiles/snaak_manipulation: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 CMakeFiles/snaak_manipulation: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 CMakeFiles/snaak_manipulation: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
