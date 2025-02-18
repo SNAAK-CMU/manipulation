@@ -16,9 +16,9 @@ from geometry_msgs.msg import Transform, Vector3, Quaternion
 import tf_transformations
 import logging
 
-class TrajectoryFollowerActionServer(Node): #why not call this manipulation_node
+class ManipulationActionServer(Node): #why not call this manipulation_node
     def __init__(self):
-        super().__init__('trajectory_follower_action_server')
+        super().__init__('manipulation_action_server')
         self._action_server = ActionServer(
             self,
             FollowTrajectory,
@@ -26,7 +26,6 @@ class TrajectoryFollowerActionServer(Node): #why not call this manipulation_node
             self.execute_trajectory_callback
         )
 
-        super().__init__('pickup_action_server')
         self._action_server = ActionServer(
             self,
             Pickup,
@@ -98,18 +97,25 @@ class TrajectoryFollowerActionServer(Node): #why not call this manipulation_node
             new_pose = self.fa.get_pose()
             new_pose.translation = [destination_x, destination_y, 0]
             new_pose.rotation = np.identity(3)
-            self.fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=True)
+            self.fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=False, block=False)
             self.get_logger().info("Moving above grasp point...")
-            time.sleep(2) # replace this with checking if the robot is out of skill
-
+            while(not self.fa.is_skill_done()): # looping, and at each iteration detect if arm is in collision with boxes (this uses the frankapy boxes)
+                if (self.fa.is_joints_in_collision_with_boxes()):
+                    self.get_logger.info("In Collision with boxes, cancelling motion")
+                    self.fa.stop_skill() # this seems to make the motion break, but it does prevent collision
+                    raise Exception("In Collision with boxes, cancelling motion")
+                
             # move down
             new_pose = self.fa.get_pose()
             new_pose.translation -= [0, 0, depth]
             new_pose.rotation = np.identity(3)
-            self.fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=True)
+            self.fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=False, block=False)
             self.get_logger().info("Moving Down...")
-            time.sleep(2) # replace this with checking if the robot is out of skill
-
+            while(not self.fa.is_skill_done()):
+                if (self.fa.is_joints_in_collision_with_boxes()):
+                    self.get_logger.info("In Collision with boxes, cancelling motion")
+                    self.fa.stop_skill()
+                    raise Exception("In Collision with boxes, cancelling motion")
             # call the pneumatic node service
             # self.get_logger("Grasped!")
             
@@ -117,10 +123,13 @@ class TrajectoryFollowerActionServer(Node): #why not call this manipulation_node
             new_pose = self.fa.get_pose()
             new_pose.translation += [0, 0, depth]
             new_pose.rotation = np.identity(3)
-            self.fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=True)
+            self.fa.goto_pose(new_pose, joint_impedances=[100, 100, 100, 100, 100, 100, 100], use_impedance=False)
             self.get_logger().info("Moving up...")
-            time.sleep(2) # replace this with checking if the robot is out of skill
-
+            while(not self.fa.is_skill_done()):
+                if (self.fa.is_joints_in_collision_with_boxes()):
+                    self.get_logger.info("In Collision with boxes, cancelling motion")
+                    self.fa.stop_skill()
+                    raise Exception("In Collision with boxes, cancelling motion")
             success=True
 
         except Exception as e:
@@ -222,13 +231,13 @@ class TrajectoryFollowerActionServer(Node): #why not call this manipulation_node
 
 def main(args=None):
     rclpy.init(args=args)
-    trajectory_follower_action_server = TrajectoryFollowerActionServer()
+    manipulation_action_server = TrajectoryFollowerActionServer()
     try:
-        rclpy.spin(trajectory_follower_action_server)
+        rclpy.spin(manipulation_action_server)
     except KeyboardInterrupt:
         pass
     finally:
-        trajectory_follower_action_server.destroy_node()
+        manipulation_action_server.destroy_node()
         rclpy.shutdown()
 
 

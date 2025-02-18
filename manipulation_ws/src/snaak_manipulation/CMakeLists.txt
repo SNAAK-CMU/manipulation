@@ -24,7 +24,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 )
 
 install(PROGRAMS
-  scripts/follow_trajectory.py
+  scripts/manipulation_actions.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
