@@ -1,9 +1,0 @@
-{
-  "package_name": "snaak_manipulation",
-  "non_idl_tuples": [
-    "/home/oberton/manipulation/manipulation_ws/src/snaak_manipulation:action/FollowTrajectory.action",
-    "/home/oberton/manipulation/manipulation_ws/src/snaak_manipulation:action/Pickup.action",
-    "/home/oberton/manipulation/manipulation_ws/src/snaak_manipulation:action/ManipulateIngredient.action",
-    "/home/oberton/manipulation/manipulation_ws/src/snaak_manipulation:action/ReturnToHome.action"
-  ]
-}

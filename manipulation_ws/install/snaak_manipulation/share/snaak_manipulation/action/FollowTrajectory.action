@@ -1,5 +1,0 @@
-int32 traj_id
----
-geometry_msgs/Transform end_pose
----
-# TODO: want any feedback?
