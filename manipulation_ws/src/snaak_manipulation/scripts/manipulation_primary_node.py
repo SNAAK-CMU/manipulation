@@ -7,14 +7,15 @@ from rclpy.parameter import Parameter
 from action_msgs.msg import GoalStatus
 
 from snaak_manipulation.action import FollowTrajectory, Pickup, ManipulateIngredient, ReturnToHome
+import time
 
 class ExecuteIngredientManipulationServer(Node):
 
     def __init__(self):
         super().__init__('ingredient_manipulation_server')
 
-        self.declare_parameter('cheese_bin_id', 1)
-        self.declare_parameter('ham_bin_id', 2)
+        self.declare_parameter('ham_bin_id', 1)
+        self.declare_parameter('cheese_bin_id', 2)
         self.declare_parameter('bread_bin_id', 3)
 
         self.bin_id = {
@@ -86,7 +87,7 @@ class ExecuteIngredientManipulationServer(Node):
     def execute_ingred_manipulation_callback(self, goal_handle):
         # Considering ingredient 0 is cheese, 1 is ham, and 2 is bread
         ingredient_id = goal_handle.request.ingredient_id
-
+        self.current_location = 0 # TODO this is temporary, until we have more trajectories generated
         bin_location = None
         match ingredient_id:
             case 0:
@@ -114,11 +115,19 @@ class ExecuteIngredientManipulationServer(Node):
         else:
             self.current_location = bin_location
 
+        time.sleep(2)
 
         pickup_goal = Pickup.Goal()
-        pickup_goal.x = 0.3 # TODO Replace these with better values
-        pickup_goal.y = 0
-        pickup_goal.depth = 0.1
+
+        # TODO Replace this with vision vlues, these have been manually found
+        if (bin_location == 2):
+            pickup_goal.x = 0.447 
+            pickup_goal.y = -0.302
+            pickup_goal.depth = 0.23
+        elif (bin_location == 3):
+            pickup_goal.x = 0.24
+            pickup_goal.y = -0.302
+            pickup_goal.depth = 0.3
 
         pickup_success = self.send_goal(self._pickup_action_client, pickup_goal)
 
@@ -146,7 +155,7 @@ class ExecuteIngredientManipulationServer(Node):
         if (not success):
             goal_handle.abort()
             self.get_logger().error("Return To Home Failed")
-            return ManipulateIngredient.Result()
+            return ReturnToHome.Result()
         else:
             self.current_location = 0
 
