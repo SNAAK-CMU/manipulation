@@ -1,12 +1,18 @@
 file(REMOVE_RECURSE
   "CMakeFiles/snaak_manipulation__rosidl_typesupport_c.dir/rosidl_typesupport_c/snaak_manipulation/action/follow_trajectory__type_support.cpp.o"
   "CMakeFiles/snaak_manipulation__rosidl_typesupport_c.dir/rosidl_typesupport_c/snaak_manipulation/action/follow_trajectory__type_support.cpp.o.d"
+  "CMakeFiles/snaak_manipulation__rosidl_typesupport_c.dir/rosidl_typesupport_c/snaak_manipulation/action/manipulate_ingredient__type_support.cpp.o"
+  "CMakeFiles/snaak_manipulation__rosidl_typesupport_c.dir/rosidl_typesupport_c/snaak_manipulation/action/manipulate_ingredient__type_support.cpp.o.d"
   "CMakeFiles/snaak_manipulation__rosidl_typesupport_c.dir/rosidl_typesupport_c/snaak_manipulation/action/pickup__type_support.cpp.o"
   "CMakeFiles/snaak_manipulation__rosidl_typesupport_c.dir/rosidl_typesupport_c/snaak_manipulation/action/pickup__type_support.cpp.o.d"
+  "CMakeFiles/snaak_manipulation__rosidl_typesupport_c.dir/rosidl_typesupport_c/snaak_manipulation/action/return_to_home__type_support.cpp.o"
+  "CMakeFiles/snaak_manipulation__rosidl_typesupport_c.dir/rosidl_typesupport_c/snaak_manipulation/action/return_to_home__type_support.cpp.o.d"
   "libsnaak_manipulation__rosidl_typesupport_c.pdb"
   "libsnaak_manipulation__rosidl_typesupport_c.so"
   "rosidl_typesupport_c/snaak_manipulation/action/follow_trajectory__type_support.cpp"
+  "rosidl_typesupport_c/snaak_manipulation/action/manipulate_ingredient__type_support.cpp"
   "rosidl_typesupport_c/snaak_manipulation/action/pickup__type_support.cpp"
+  "rosidl_typesupport_c/snaak_manipulation/action/return_to_home__type_support.cpp"
 )
 
 # Per-language clean rules from dependency scanning.

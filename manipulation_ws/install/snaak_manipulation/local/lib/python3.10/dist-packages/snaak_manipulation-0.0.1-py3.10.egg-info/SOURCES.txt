@@ -6,4 +6,6 @@ snaak_manipulation.egg-info/dependency_links.txt
 snaak_manipulation.egg-info/top_level.txt
 snaak_manipulation/action/__init__.py
 snaak_manipulation/action/_follow_trajectory.py
+snaak_manipulation/action/_manipulate_ingredient.py
 snaak_manipulation/action/_pickup.py
+snaak_manipulation/action/_return_to_home.py

@@ -20,14 +20,14 @@ from autolab_core import RigidTransform
 class ManipulationActionServerNode(Node):
     def __init__(self):
         super().__init__('manipulation_action_server')
-        self._action_server = ActionServer(
+        self._traj_action_server = ActionServer(
             self,
             FollowTrajectory,
             'follow_trajectory',
             self.execute_trajectory_callback
         )
 
-        self._action_server = ActionServer(
+        self._pickup_action_server = ActionServer(
             self,
             Pickup,
             'pickup',
@@ -35,9 +35,7 @@ class ManipulationActionServerNode(Node):
         )
 
         self.fa = FrankaArm(init_rclpy=False)
-    
-        self.get_logger().info("Started Manipulation node")
-
+        self.get_logger().info("Started Manipulation Action Server Node")
 
 
     def execute_trajectory_callback(self, goal_handle):
@@ -78,6 +76,12 @@ class ManipulationActionServerNode(Node):
             result.end_pose = transform
             return result
     
+    def wait_for_skill_with_collision_check(self):
+        while(not self.fa.is_skill_done()):  # looping, and at each iteration detect if arm is in collision with boxes (this uses the frankapy boxes)
+            if (self.fa.is_joints_in_collision_with_boxes()):
+                self.fa.stop_skill() # this seems to make the motion break, but it does prevent collision
+                raise Exception("In Collision with boxes, cancelling motion")
+
     def execute_pickup_callback(self, goal_handle):
 
         # first move to x, y
@@ -102,24 +106,17 @@ class ManipulationActionServerNode(Node):
             new_pose.rotation = default_rotation
             self.fa.goto_pose(new_pose, cartesian_impedances=[3000, 3000, 300, 300, 300, 300], use_impedance=False, block=False)
             self.get_logger().info("Moving above grasp point...")
-            while(not self.fa.is_skill_done()): # looping, and at each iteration detect if arm is in collision with boxes (this uses the frankapy boxes)
-                if (self.fa.is_joints_in_collision_with_boxes()):
-                    self.get_logger().info("In Collision with boxes, cancelling motion")
-                    self.fa.stop_skill() # this seems to make the motion break, but it does prevent collision
-                    raise Exception("In Collision with boxes, cancelling motion")
+            self.wait_for_skill_with_collision_check()
             
             # move down
             #new_pose = self.fa.get_pose()
             new_pose = RigidTransform(from_frame='franka_tool', to_frame='world')
-            new_pose.translation = [destination_x, destination_y, z_pre_grasp - depth] #x, y global, depth is relative
+            new_pose.translation = [destination_x, destination_y, z_pre_grasp - depth] #x, y global, depth is relative TODO: confirm this
             new_pose.rotation = default_rotation
             self.fa.goto_pose(new_pose, cartesian_impedances=[3000, 3000, 300, 300, 300, 300], use_impedance=False, block=False)
             self.get_logger().info("Moving Down...")
-            while(not self.fa.is_skill_done()):
-                if (self.fa.is_joints_in_collision_with_boxes()):
-                    self.get_logger().info("In Collision with boxes, cancelling motion")
-                    self.fa.stop_skill()
-                    raise Exception("In Collision with boxes, cancelling motion")
+            self.wait_for_skill_with_collision_check()
+
             # call the pneumatic node service
             # self.get_logger("Grasped!")
             time.sleep(2)
@@ -129,11 +126,7 @@ class ManipulationActionServerNode(Node):
             new_pose.rotation = default_rotation
             self.fa.goto_pose(new_pose, cartesian_impedances=[3000, 3000, 300, 300, 300, 300], use_impedance=False, block=False)
             self.get_logger().info("Moving up...")
-            while(not self.fa.is_skill_done()):
-                if (self.fa.is_joints_in_collision_with_boxes()):
-                    self.get_logger().info("In Collision with boxes, cancelling motion")
-                    self.fa.stop_skill()
-                    raise Exception("In Collision with boxes, cancelling motion")
+            self.wait_for_skill_with_collision_check()
             success=True
 
         except Exception as e:
@@ -168,14 +161,14 @@ class ManipulationActionServerNode(Node):
         package_share_directory = get_package_share_directory('snaak_manipulation')
         pkl_file_name = None
         match traj_id:
-            case 0:
-                pkl_file_name = "home_assembly_traj.pkl"
             case 1:
                 pkl_file_name = "home2bin1_cam_verified.pkl"
             case 2:
                 pkl_file_name = "home2bin2_cam_verified.pkl"
             case 3:
                 pkl_file_name = "home2bin3_cam_verified.pkl"
+            case 4:
+                pkl_file_name = "home_assembly_traj.pkl"
         
         if pkl_file_name is None:
             self.get_logger().info('Invalid Trajectory Entered')

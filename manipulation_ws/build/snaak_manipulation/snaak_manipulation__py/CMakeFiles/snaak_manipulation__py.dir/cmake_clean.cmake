@@ -5,8 +5,12 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/snaak_manipulation/action/__init__.py"
   "../rosidl_generator_py/snaak_manipulation/action/_follow_trajectory.py"
   "../rosidl_generator_py/snaak_manipulation/action/_follow_trajectory_s.c"
+  "../rosidl_generator_py/snaak_manipulation/action/_manipulate_ingredient.py"
+  "../rosidl_generator_py/snaak_manipulation/action/_manipulate_ingredient_s.c"
   "../rosidl_generator_py/snaak_manipulation/action/_pickup.py"
   "../rosidl_generator_py/snaak_manipulation/action/_pickup_s.c"
+  "../rosidl_generator_py/snaak_manipulation/action/_return_to_home.py"
+  "../rosidl_generator_py/snaak_manipulation/action/_return_to_home_s.c"
   "CMakeFiles/snaak_manipulation__py"
 )
 

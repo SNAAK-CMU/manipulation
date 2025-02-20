@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation
+CMAKE_SOURCE_DIR = /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation
+CMAKE_BINARY_DIR = /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation
 
 # Utility rule file for snaak_manipulation.
 
@@ -66,8 +66,10 @@ include CMakeFiles/snaak_manipulation.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/snaak_manipulation.dir/progress.make
 
-CMakeFiles/snaak_manipulation: /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation/action/FollowTrajectory.action
-CMakeFiles/snaak_manipulation: /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation/action/Pickup.action
+CMakeFiles/snaak_manipulation: /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation/action/FollowTrajectory.action
+CMakeFiles/snaak_manipulation: /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation/action/Pickup.action
+CMakeFiles/snaak_manipulation: /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation/action/ManipulateIngredient.action
+CMakeFiles/snaak_manipulation: /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation/action/ReturnToHome.action
 CMakeFiles/snaak_manipulation: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 CMakeFiles/snaak_manipulation: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 CMakeFiles/snaak_manipulation: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -116,6 +118,6 @@ CMakeFiles/snaak_manipulation.dir/clean:
 .PHONY : CMakeFiles/snaak_manipulation.dir/clean
 
 CMakeFiles/snaak_manipulation.dir/depend:
-	cd /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles/snaak_manipulation.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles/snaak_manipulation.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/snaak_manipulation.dir/depend
 

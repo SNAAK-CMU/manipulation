@@ -1,10 +1,12 @@
 {
   "package_name": "snaak_manipulation",
-  "output_dir": "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_typesupport_introspection_c/snaak_manipulation",
+  "output_dir": "/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_typesupport_introspection_c/snaak_manipulation",
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_introspection_c/resource",
   "idl_tuples": [
-    "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation:action/FollowTrajectory.idl",
-    "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation:action/Pickup.idl"
+    "/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation:action/FollowTrajectory.idl",
+    "/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation:action/Pickup.idl",
+    "/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation:action/ManipulateIngredient.idl",
+    "/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation:action/ReturnToHome.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
@@ -84,8 +86,10 @@
     "/opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/msg__type_support.c.em",
     "/opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/srv__rosidl_typesupport_introspection_c.h.em",
     "/opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/srv__type_support.c.em",
-    "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation/action/FollowTrajectory.idl",
-    "/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation/action/Pickup.idl",
+    "/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation/action/FollowTrajectory.idl",
+    "/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation/action/Pickup.idl",
+    "/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation/action/ManipulateIngredient.idl",
+    "/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_adapter/snaak_manipulation/action/ReturnToHome.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl",

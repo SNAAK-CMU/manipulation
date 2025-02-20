@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation
+CMAKE_SOURCE_DIR = /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation
+CMAKE_BINARY_DIR = /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation
 
 # Include any dependencies generated for this target.
 include CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend.make
@@ -84,6 +84,8 @@ rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h: /opt/ros/humbl
 rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
 rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h: rosidl_adapter/snaak_manipulation/action/FollowTrajectory.idl
 rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h: rosidl_adapter/snaak_manipulation/action/Pickup.idl
+rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h: rosidl_adapter/snaak_manipulation/action/ManipulateIngredient.idl
+rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h: rosidl_adapter/snaak_manipulation/action/ReturnToHome.idl
 rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -151,8 +153,8 @@ rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h: /opt/ros/humbl
 rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h: /opt/ros/humble/share/unique_identifier_msgs/msg/UUID.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
+	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c__arguments.json
 
 rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.h: rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.h
@@ -175,50 +177,112 @@ rosidl_generator_c/snaak_manipulation/action/detail/pickup__struct.h: rosidl_gen
 rosidl_generator_c/snaak_manipulation/action/detail/pickup__type_support.h: rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/snaak_manipulation/action/detail/pickup__type_support.h
 
+rosidl_generator_c/snaak_manipulation/action/manipulate_ingredient.h: rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/snaak_manipulation/action/manipulate_ingredient.h
+
+rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.h: rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.h
+
+rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__struct.h: rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__struct.h
+
+rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__type_support.h: rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__type_support.h
+
+rosidl_generator_c/snaak_manipulation/action/return_to_home.h: rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/snaak_manipulation/action/return_to_home.h
+
+rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.h: rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.h
+
+rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__struct.h: rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__struct.h
+
+rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__type_support.h: rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__type_support.h
+
 rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c: rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c
 
 rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c: rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c
 
+rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c: rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c
+
+rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c: rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c
+
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.o: CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/flags.make
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.o: rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.o: CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.o -MF CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.o.d -o CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.o -c /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.o -MF CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.o.d -o CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.o -c /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c
 
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c > CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c > CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.i
 
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c -o CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c -o CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.s
 
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.o: CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/flags.make
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.o: rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.o: CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.o -MF CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.o.d -o CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.o -c /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.o -MF CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.o.d -o CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.o -c /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c
 
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c > CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c > CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.i
 
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c -o CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c -o CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.s
+
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c.o: CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/flags.make
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c.o: rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c.o: CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c.o -MF CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c.o.d -o CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c.o -c /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c
+
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c > CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c.i
+
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c -o CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c.s
+
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c.o: CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/flags.make
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c.o: rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c.o: CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c.o -MF CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c.o.d -o CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c.o -c /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c
+
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c > CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c.i
+
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c -o CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c.s
 
 # Object files for target snaak_manipulation__rosidl_generator_c
 snaak_manipulation__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.o" \
-"CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.o"
+"CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.o" \
+"CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c.o" \
+"CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c.o"
 
 # External object files for target snaak_manipulation__rosidl_generator_c
 snaak_manipulation__rosidl_generator_c_EXTERNAL_OBJECTS =
 
 libsnaak_manipulation__rosidl_generator_c.so: CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.c.o
 libsnaak_manipulation__rosidl_generator_c.so: CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c.o
+libsnaak_manipulation__rosidl_generator_c.so: CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c.o
+libsnaak_manipulation__rosidl_generator_c.so: CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c.o
 libsnaak_manipulation__rosidl_generator_c.so: CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/build.make
 libsnaak_manipulation__rosidl_generator_c.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
 libsnaak_manipulation__rosidl_generator_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
@@ -228,7 +292,7 @@ libsnaak_manipulation__rosidl_generator_c.so: /opt/ros/humble/lib/libunique_iden
 libsnaak_manipulation__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libsnaak_manipulation__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libsnaak_manipulation__rosidl_generator_c.so: CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libsnaak_manipulation__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library libsnaak_manipulation__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -243,12 +307,22 @@ CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__functions.h
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__struct.h
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/detail/follow_trajectory__type_support.h
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.c
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__functions.h
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__struct.h
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/detail/manipulate_ingredient__type_support.h
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.c
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/detail/pickup__functions.h
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/detail/pickup__struct.h
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/detail/pickup__type_support.h
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.c
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__functions.h
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__struct.h
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/detail/return_to_home__type_support.h
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/follow_trajectory.h
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/manipulate_ingredient.h
 CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/pickup.h
-	cd /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
+CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend: rosidl_generator_c/snaak_manipulation/action/return_to_home.h
+	cd /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/snaak_manipulation__rosidl_generator_c.dir/depend
 

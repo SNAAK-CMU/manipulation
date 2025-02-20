@@ -16,15 +16,19 @@ find_package(geometry_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(tf2 REQUIRED) 
 find_package(tf2_ros REQUIRED) 
+find_package(action_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "action/FollowTrajectory.action"
   "action/Pickup.action"
+  "action/ManipulateIngredient.action"
+  "action/ReturnToHome.action"
   DEPENDENCIES geometry_msgs
 )
 
 install(PROGRAMS
   scripts/manipulation_actions_node.py
+  scripts/manipulation_primary_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

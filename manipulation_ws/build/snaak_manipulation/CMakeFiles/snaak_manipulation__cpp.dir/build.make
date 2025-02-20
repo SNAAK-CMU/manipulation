@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation
+CMAKE_SOURCE_DIR = /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation
+CMAKE_BINARY_DIR = /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation
 
 # Utility rule file for snaak_manipulation__cpp.
 
@@ -76,6 +76,16 @@ CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/acti
 CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__struct.hpp
 CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__traits.hpp
 CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__type_support.hpp
+CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/manipulate_ingredient.hpp
+CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/manipulate_ingredient__builder.hpp
+CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/manipulate_ingredient__struct.hpp
+CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/manipulate_ingredient__traits.hpp
+CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/manipulate_ingredient__type_support.hpp
+CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/return_to_home.hpp
+CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/return_to_home__builder.hpp
+CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/return_to_home__struct.hpp
+CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/return_to_home__traits.hpp
+CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/return_to_home__type_support.hpp
 CMakeFiles/snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -95,6 +105,8 @@ rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/h
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: rosidl_adapter/snaak_manipulation/action/FollowTrajectory.idl
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: rosidl_adapter/snaak_manipulation/action/Pickup.idl
+rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: rosidl_adapter/snaak_manipulation/action/ManipulateIngredient.idl
+rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: rosidl_adapter/snaak_manipulation/action/ReturnToHome.idl
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -162,8 +174,8 @@ rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/h
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp: /opt/ros/humble/share/unique_identifier_msgs/msg/UUID.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_cpp__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/snaak_manipulation/action/detail/follow_trajectory__builder.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/detail/follow_trajectory__builder.hpp
@@ -192,17 +204,57 @@ rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__traits.hpp: rosidl
 rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__type_support.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__type_support.hpp
 
+rosidl_generator_cpp/snaak_manipulation/action/manipulate_ingredient.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/manipulate_ingredient.hpp
+
+rosidl_generator_cpp/snaak_manipulation/action/detail/manipulate_ingredient__builder.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/detail/manipulate_ingredient__builder.hpp
+
+rosidl_generator_cpp/snaak_manipulation/action/detail/manipulate_ingredient__struct.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/detail/manipulate_ingredient__struct.hpp
+
+rosidl_generator_cpp/snaak_manipulation/action/detail/manipulate_ingredient__traits.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/detail/manipulate_ingredient__traits.hpp
+
+rosidl_generator_cpp/snaak_manipulation/action/detail/manipulate_ingredient__type_support.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/detail/manipulate_ingredient__type_support.hpp
+
+rosidl_generator_cpp/snaak_manipulation/action/return_to_home.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/return_to_home.hpp
+
+rosidl_generator_cpp/snaak_manipulation/action/detail/return_to_home__builder.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/detail/return_to_home__builder.hpp
+
+rosidl_generator_cpp/snaak_manipulation/action/detail/return_to_home__struct.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/detail/return_to_home__struct.hpp
+
+rosidl_generator_cpp/snaak_manipulation/action/detail/return_to_home__traits.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/detail/return_to_home__traits.hpp
+
+rosidl_generator_cpp/snaak_manipulation/action/detail/return_to_home__type_support.hpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/snaak_manipulation/action/detail/return_to_home__type_support.hpp
+
 snaak_manipulation__cpp: CMakeFiles/snaak_manipulation__cpp
 snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/follow_trajectory__builder.hpp
 snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/follow_trajectory__struct.hpp
 snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/follow_trajectory__traits.hpp
 snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/follow_trajectory__type_support.hpp
+snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/manipulate_ingredient__builder.hpp
+snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/manipulate_ingredient__struct.hpp
+snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/manipulate_ingredient__traits.hpp
+snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/manipulate_ingredient__type_support.hpp
 snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__builder.hpp
 snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__struct.hpp
 snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__traits.hpp
 snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/pickup__type_support.hpp
+snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/return_to_home__builder.hpp
+snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/return_to_home__struct.hpp
+snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/return_to_home__traits.hpp
+snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/detail/return_to_home__type_support.hpp
 snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/follow_trajectory.hpp
+snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/manipulate_ingredient.hpp
 snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/pickup.hpp
+snaak_manipulation__cpp: rosidl_generator_cpp/snaak_manipulation/action/return_to_home.hpp
 snaak_manipulation__cpp: CMakeFiles/snaak_manipulation__cpp.dir/build.make
 .PHONY : snaak_manipulation__cpp
 
@@ -215,6 +267,6 @@ CMakeFiles/snaak_manipulation__cpp.dir/clean:
 .PHONY : CMakeFiles/snaak_manipulation__cpp.dir/clean
 
 CMakeFiles/snaak_manipulation__cpp.dir/depend:
-	cd /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/src/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation /home/snaak/Documents/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles/snaak_manipulation__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation /home/oberton/manipulation/manipulation_ws/src/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation /home/oberton/manipulation/manipulation_ws/build/snaak_manipulation/CMakeFiles/snaak_manipulation__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/snaak_manipulation__cpp.dir/depend
 

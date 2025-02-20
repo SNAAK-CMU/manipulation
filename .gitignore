@@ -1,1 +1,8 @@
 __pycache__/*
+manipulation_ws/build/
+manipulation_ws/install/
+manipulation_ws/log/
+
+# Ignore other common files
+*.log
+*.swp
