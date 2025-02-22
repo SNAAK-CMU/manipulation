@@ -94,13 +94,13 @@ class FrankaConstants:
         [0.12, 0.12, 0.4],
         [0.12, 0.12, 0.25],
         [0.13, 0.23, 0.12],
-        [0.05, 0.05, 0.238], # old z value was 0.2, reduced this box size from 0.12 x 0.12
+        [0.12, 0.12, 0.22], # old z value was 0.2
         #[0.08, 0.22, 0.17], represented old end effector
-        [0.06, 0.06, 0.088], # new collision box shape, change if new EE
-        [0.04, 0.04, 0.08] # bottom half of EE
+        [0.05, 0.05, 0.168], # new collision box shape, change if new EE
+
     ])
 
-    COLLISION_BOX_LINKS = [1, 1, 1, 1, 1, 3, 4, 5, 5, 5, 7, 7, 7]
+    COLLISION_BOX_LINKS = [1, 1, 1, 1, 1, 3, 4, 5, 5, 5, 7, 7]
 
     # These poses are based on the links they are attatched to
     COLLISION_BOX_POSES = np.array([
@@ -144,13 +144,13 @@ class FrankaConstants:
         [ 0.        ,  1.        ,  0.        ,  0.0176    ],
         [ 0.        ,  0.        ,  1.        , -0.0055    ],
         [ 0.        ,  0.        ,  0.        ,  1.        ]],
-    #    [[ 1.        ,  0.        ,  0.        , -0.0136    ],
+    #    [[ 1.        ,  0.        ,  0.        , -0.0136    ], # old link 7 collision box
     #     [ 0.        , -1.        ,  0.        ,  0.0092    ],
     #     [ 0.        ,  0.        , -1.        ,  0.0083    ],
     #     [ 0.        ,  0.        ,  0.        ,  1.        ]],
        [[ 1.        ,  0.        ,  0.        , -0.0136    ],
         [ 0.        , -1.        ,  0.        ,  0.0092    ],
-        [ 0.        ,  0.        , -1.        ,  0.0273    ], # Unsure if translation is in this direction
+        [ 0.        ,  0.        , -1.        ,  0.0183    ],
         [ 0.        ,  0.        ,  0.        ,  1.        ]],
     #    [[ 0.70710678,  0.70710678,  0.        ,  0.0136    ], # represented old end effector
     #     [-0.70710678,  0.70710678, -0.        , -0.0092    ],
@@ -158,11 +158,7 @@ class FrankaConstants:
     #     [ 0.        ,  0.        ,  0.        ,  1.        ]],
        [[ 0.70710678,  0.70710678,  0.        ,  0.0136    ],
         [-0.70710678,  0.70710678, -0.        , -0.0092    ],
-        [-0.        ,  0.        ,  1.        ,  0.1457 -0.009], # new end effector portrudes 0.05 m more than old one, change if new EE
-        [ 0.        ,  0.        ,  0.        ,  1.        ]],
-       [[ 0.70710678,  0.70710678,  0.        ,  0.0136    ],
-        [-0.70710678,  0.70710678, -0.        , -0.0092    ],
-        [-0.        ,  0.        ,  1.        ,  0.1457 - 0.009 + 0.04],
+        [-0.        ,  0.        ,  1.        ,  0.1457 + 0.034], # new end effector portrudes 0.05 m more than old one, change if new EE
         [ 0.        ,  0.        ,  0.        ,  1.        ]],
         ]
     )
@@ -177,43 +173,6 @@ class FrankaConstants:
                 'panda_finger_joint1', 
                 'panda_finger_joint2']
 
-    '''
-    Side view
-        
-    ---   -   -   ---
-    |||   |   |   |||
-    -----------------
-    |		|
-    |  Box 1	|
-    -----------------
-     
-    Top view 
-
-                           Arm
-        
-    ------------------
-    |    Box 2       |
-    |----------------|
-    |  |          |  |
-    |  |          |  |
-    |B |----------| B|
-    |o     Box 3    o|
-    |x |----------| x|
-    |  |          |  |
-    |7 |          | 6|
-    |  |----------|  |
-    |      Box 4     |
-    |  |----------|  |
-    |  |          |  |
-    |  |          |  |
-    |----------------|
-    |      Box 5     |
-    ------------------
-        
-        note, using outside dimensions of bin: 0.16 x 0.26, boxes may overlap
-        '''
-    # TODO Refine these
-    # These seem to be used internally in frankapy, but not for checking in FCI
     WORKSPACE_WALLS = np.array([
         # sides
         [0.25, 0.55, 0.5, 0, 0, 0, 1.1, 0.01, 1.1],
@@ -226,35 +185,9 @@ class FrankaConstants:
         [0.25, 0, 1, 0, 0, 0, 1.2, 1, 0.01],
         # bottom
         [0.25, 0, -0.05, 0, 0, 0, 1.2, 1, 0.01],
-        
-    #     # sandwich assembly area
-    #     [0.5, 0.25, 0.125, 0, 0, 0, 0.68, 0.695, 0.25],
-        
-    #     # right bin area
-
-    #     # Box 1 
-    #     [0.43, -0.3615, 0.0, 0, 0, 0, 0.68, 0.375, 0.001], # Assuming roughly 6 inch deep bins
-        
-    #     # Box 2
-    #     [0.11, -0.3615, 0.125, 0, 0, 0, 0.08, 0.375, 0.26],
-
-    #     # Box 3 
-    #     [0.344, -0.3615, 0.125, 0, 0, 0, 0.04, 0.375, 0.26],
-
-    #     # Box 4
-    #     [0.534, -0.3615, 0.125, 0, 0, 0, 0.04, 0.375, 0.26],
-
-    #     # Box 5
-    #     [0.75, -0.3615, 0.125, 0, 0, 0, 0.08, 0.375, 0.26],
-        
-    #     # Box 6
-    #     [0.43, -0.18, 0.125, 0, 0, 0, 0.68, 0.07, 0.27],
-        
-    #     # Box 7
-    #     [0.43, -0.53, 0.125, 0, 0, 0, 0.68, 0.07, 0.27]
     ])
 
-
+    # Original Workspace Walls
     # WORKSPACE_WALLS = np.array([
     #     # sides
     #     [0.15, 0.46, 0.5, 0, 0, 0, 1.2, 0.01, 1.1],

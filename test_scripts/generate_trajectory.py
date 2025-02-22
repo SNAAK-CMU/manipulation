@@ -5,6 +5,7 @@ from frankapy import FrankaArm
 from frankapy import utils
 from record_trajectory import create_formated_skill_dict
 import pickle as pkl
+from frankapy import FrankaConstants as FC
 
 
 
@@ -40,34 +41,23 @@ if __name__ == "__main__":
     fa = FrankaArm()
     parser = argparse.ArgumentParser()
     parser.add_argument('--time', '-t', type=float, default=5)
-    parser.add_argument('--file', '-f', default='home2bin3_cam_verified.pkl') #filename to save generated trajectory
+    parser.add_argument('--file', '-f', default='bin32assembly.pkl') #filename to save generated trajectory
     args = parser.parse_args()
 
     # before anything, reset joints to home position
-    fa.reset_joints()
+    #fa.reset_joints()
     
+
+
     # howto get current pose from arm
-    # start_pose = fa.get_pose()
-    # print(start_pose)
+    #fa.reset_joints()
+    pose = FC.HOME_POSE
+    start_pose = pose.copy()
+    end_pose = start_pose.copy()
 
-    # get the current pose as the starting pose for generating a trajectory
-    # pose1 = start_pose.copy()
+    start_pose.translation = [0.25766588, -0.2418791, 0.47701201]
+    end_pose.translation = [0.45895706, 0.08462167, 0.51798657]
 
-    # copy the current pose again to another variable to start defining end pose
-    # pose2 = start_pose.copy()
-    # define translation to go to desination pose by add/subtract relative translation from current pose
-    # pose2.translation -= [0.0, 0.0, 0.1] 
-
-    # either define relative rotation to go to destination pose or directly set final orientation
-    #z_rot = np.array([[0, 1, 0], [-1, 0, 0], [0, 0, 1]]) # z axis points down, -90 turn
-    #pose2.rotation = pose2.rotation@z_rot
-    # pose2.rotation = [[ 9.99721276e-01,  9.19412298e-04,  2.31793417e-02],
-    #                 [ 3.28930214e-04, -9.99666019e-01,  2.54656958e-02],
-    #                 [ 2.31950137e-02, -2.54509735e-02, -9.99406932e-01]]
-    #
-    
-    # call the generate trajectory function 
-    # generate_trajectory(pose1, pose2, args, fa)
-    #fa.reset_joints() # back to home
+    generate_trajectory(start_pose, end_pose, args, fa)
 
 

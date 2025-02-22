@@ -8,11 +8,14 @@ from frankapy import FrankaConstants as FC
 
 if __name__ == "__main__":
     fa = FrankaArm()
-    fa.reset_joints()
+    #fa.reset_joints()
     #print(fa.get_collision_boxes_poses())
     new_pose = RigidTransform()
     #new_pose.translation = np.array([0, 0, 0])
     orig_pose = fa.get_pose()
+    # new_pose = orig_pose.copy()
+    # new_pose.translation = [ 0.38507747, -0.24862385,  0.46716527]
+    # fa.goto_pose(new_pose)
     print(orig_pose.translation)
     print(orig_pose.rotation)
     #new_pose = orig_pose.copy()
