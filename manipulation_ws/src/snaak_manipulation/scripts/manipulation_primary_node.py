@@ -119,7 +119,7 @@ class ExecuteIngredientManipulationServer(Node):
 
         pickup_goal = Pickup.Goal()
 
-        # TODO Replace this with vision vlues, these have been manually found
+        # TODO Replace this with vision values, these have been manually found
         if (bin_location == 2):
             pickup_goal.x = 0.447 
             pickup_goal.y = -0.302
